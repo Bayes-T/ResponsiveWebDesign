@@ -1,0 +1,130 @@
+.oferta {
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+}
+
+.precio {
+    font-size: 4rem;
+    margin: 0;
+}
+ /*  EJEMPLO BÁSICO, DESKTOP FIRST
+@media (max-width: 600px) {
+    .oferta {
+        max-width: 30rem;
+    }
+    .precio {
+        font-size: 2rem;
+    }
+}
+
+*/
+
+/* Mobile First 
+
+@media (min-width: 600px){
+    .oferta {
+        max-width: 40rem;
+        margin: 0 auto;
+    }   
+}
+
+@media (min-width:1000px){
+    .oferta {
+        max-width: 90rem;
+    }
+}
+
+*/
+
+/* Media Query entre dos tamaños 
+
+@media (min-width: 600px) and (max-width:800px) {
+    body {
+        background-color: yellow;
+    }
+}
+Con una coma puedo añadirle múltiples condiciones. ()and (), ()... así por intervalos lo aplica
+*/
+
+/* Media Querys standard
+
+También está en página media query standard devices
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... }
+
+*/
+
+
+/* Contenedor Responsive, muy importante */
+
+.contenedor-responsive {
+    background-color: #fff;
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+
+    max-width: 1000px;
+    width: 90%;
+}
+
+/* Tres columnas flexbox */
+
+@media (min-width: 768px) {
+    .tres-columnas-flex {
+        display: flex;
+        gap: 2rem;
+    }
+    .columna {
+        width: 500px;
+        /* Flex o flexgrow: 1 para que crezca automático a la derecha*/
+    }
+}
+
+@media (min-width: 768px) {
+    .tres-columnas-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+        column-gap: 2rem;
+    }
+
+    .tres-columnas-grid .columna {
+       width: 385px;
+    }
+}
+
+/* Imágenes responsive */
+
+/* SIEMPRE PONERLE A IMÁGENES, para que nunca crezca más de su tamaño natural, pero sí se puede hacer más pequeña. Así no tengo imágenes de baja resolución haciéndose gigantes
+El display block en lugar de inline y replaced (su tamaño viene de fuente externa), por lo tanto se ubican una debajo de otra y le quito el pequeño margin abajo*/
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Formatos modernos Avif y Webp. SIEMPRE VA
+
+PICTURE Y LAZY LOADING
+*/
+
+
+/* Diferentes tamaños de imágenes con srcset */
+

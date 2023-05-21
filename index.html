@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/01.css">
     
 </head>
 <body>
@@ -76,14 +77,54 @@
         </div>
 
         <h2>Imágenes Responsive</h2>
-        <img src="img/imagen.jpg" alt="imagen responsive" >
+        <div class="imagen_responsive">
+            <div class="contenedor_imagen">
+        <img src="img/imagen.avif" alt="imagen responsive" >
+             </div>
+        </div>
 
         <h2>Formatos Modernos</h2>
+<!--Si no lo soporta, va a la siguiente opción-->
+        <picture>
+            <source srcset="img/imagen.avif" type="image/avif"/>
+            <source srcset="img/imagen.webp" type="image/webp"/>
+            <img loading="lazy" src="img/imagen.jpg" alt="imagen">
+        </picture>
 
 
         <h2>Formatos Modernos con SRC SET</h2>
 
+        <picture>
+            <source
+            sizes="1920w 1280w 640w"
+            srcset="img/imagen.avif 1920w,
+                    img/imagen1-000.avif 1280w,
+                    img/imagen-700.avif 640w"
+                    type="image/avif"
+            >
+
+            <source
+            sizes="1920w 1280w 640w"
+            srcset="img/imagen.webp 1920w,
+                    img/imagen1-000.webp 1280w,
+                    img/imagen-700.webp 640w"
+                    type="image/webp"
+            >
+
+            <source
+            sizes="1920w 1280w 640w"
+            srcset="img/imagen.jpg 1920w,
+                    img/imagen1-000.jpg 1280w,
+                    img/imagen-700.jpg 640w"
+                    type="image/jpeg"
+            >
+
+            <img loading="lazy" src="imagen.jpg" alt="imagen">
+        </picture>
     </div>
+
+
+
 
 </body>
 </html>
